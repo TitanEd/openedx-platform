@@ -527,6 +527,7 @@ def student_dashboard(request):  # lint-amnesty, pylint: disable=too-many-statem
 
     """
     user = request.user
+    return redirect(settings.SEARN_ADMINISTRATOR_MICROFRONTEND_URL)
     if not UserProfile.objects.filter(user=user).exists():
         return redirect(settings.ACCOUNT_MICROFRONTEND_URL)
 
